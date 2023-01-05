@@ -12,7 +12,7 @@ const Home = ({products, bannerData}) => (
         <h2>
           Best Selling Products
         </h2>
-        <p>Speakers of many variations</p>
+        <p>All kinds of goodies</p>
       </div>
 
       <div className='products-container'>

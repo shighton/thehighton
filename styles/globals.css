@@ -246,10 +246,8 @@ text-align: end;
 }
 .footer-banner-image{
   position: absolute;
-  /* top: -35%;
-  left: 8%; */
-  top: -25%;
-  left: 25%;
+  top: -15%;
+  left: 37.5%;
 }
 .banner-desc .right{
   line-height: 1.4;
