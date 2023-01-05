@@ -640,8 +640,8 @@ margin-top: 160px;
   .hero-banner-image{
     /* max-width: 77%;
     max-height: 62%; */
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
     /* top: 30%; */
     top: 10vw;
     right: 5%;
@@ -695,7 +695,7 @@ margin-top: 160px;
     z-index: 10000;
   }
   .hero-banner-container{
-    height: 80vw;
+    height: 90vw;
   }
   .desc{
    top: 60vw;
