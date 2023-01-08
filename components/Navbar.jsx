@@ -9,9 +9,7 @@ const Navbar = () => {
   return (
     <div className='navbar-container'>
       <p className='logo'>
-        <Link href='/'>The Highton
-          <img src='/public/android-chrome-512x512.png'/>
-        </Link>
+        <Link href='/'>The Highton</Link>
       </p>
       <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
