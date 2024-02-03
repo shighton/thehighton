@@ -18,8 +18,8 @@ const Sabastian = () => (
 
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='../resources/Fullbody_Grad.jpeg'></img>
-                <img className='head-grad' src='../resources/Head_Grad.jpeg'></img>
+                <img className='fullbody-grad' src='resources/Fullbody_Grad.JPEG'></img>
+                <img className='head-grad' src='resources/Head_Grad.jpeg'></img>
 
             </div>
 
