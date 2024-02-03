@@ -4,9 +4,9 @@ import {AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping} from 'r
 import {TiDeleteOutline} from 'react-icons/ti';
 import toast from 'react-hot-toast';
 
-import {useStateContext} from '../context/stateContext';
-import {urlFor} from  '../lib/client';
-import getStripe from '../lib/getStripe';
+import {useStateContext} from '../../context/stateContext';
+import {urlFor} from  '../../lib/client';
+import getStripe from '../../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
@@ -38,8 +38,8 @@ const Cart = () => {
           <div className='empty-cart'>
             <AiOutlineShopping size={150} />
             <h3>Your Cart is Empty</h3>
-            <Link href='/'>
-              <button type='button' onClick={() => setShowCart(false)} className='btn'>Continue Shopping</button>
+            <Link href='/store'>
+              <button type='button' onClick={() => setShowCart(false)} className='btn'>Shop Now</button>
             </Link>
           </div>
         )}

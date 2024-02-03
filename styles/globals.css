@@ -15,9 +15,63 @@ body, * {
   width: 0px;
 }
 
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.blue-links {
+  color: #82adff;
+}
+
+.welcome {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2vw;
+}
+
+.welcome-home {
+  font-size: 3em;
+}
+
+.sabastian-intro {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  gap: 2vw;
+}
+
+.big-name {
+  font-size: 3em;
+}
+
+.grad-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vw;
+  gap: 2vw;
+}
+
+.fullbody-grad {
+  width: 50vw;
+}
+
+.head-grad {
+  width: 50vw;
 }
 
 .main-container{
@@ -25,6 +79,7 @@ max-width: 1400px;
 margin: auto;
 width: 100%;
 }
+
 .layout{
   padding: 10px;
 }
@@ -32,15 +87,42 @@ width: 100%;
 .navbar-container{
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+  margin-right: 1vw;
   position: relative;
 }
+
+.navbar-container-m {
+  visibility: hidden;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+}
+
+.toggle-visible {
+  visibility: visible !important;
+  display: block !important;
+}
+
+.menu-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
 .marquee-text{
   font-size: 1.5em;
   font-weight: 600;
   margin: 60px 0px;
   color: gray;
 }
+
 .marquee {
   position: relative;
   height: 400px;
@@ -55,9 +137,11 @@ width: 100%;
   animation: marquee 15s linear infinite;
   width: 180%;
 }
+
 .track:hover {
   animation-play-state: paused;
 }
+
 /* @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -67,12 +151,19 @@ width: 100%;
     -webkit-text-stroke: 1px #f02d34;
     margin-left: 6px;
 }
+
 .logo{
   /*color: gray;*/
   color: #d4e4ff;
   font-size: 1.6em;
-
 }
+
+.menu-options {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .cart-icon{
   font-size: 1.8em;
   color:#deeaff;
@@ -692,6 +783,31 @@ margin-top: 160px;
         font-size: 1em;
       }
 
+    }
+
+    .navbar-container {
+      display: none;
+      visibility: hidden;
+    }
+
+    .navbar-container-m {
+      display: flex;
+      visibility: visible;
+      justify-content: space-between;
+    }
+
+    .menu-options {
+      visibility: hidden;
+      display: none;
+    }
+
+    .cart-icon {
+      visibility: hidden;
+      display: none;
+    }
+
+    .cart-item-qty {
+      right: auto;
     }
 
     .hero-banner-container{

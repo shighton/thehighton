@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import { urlFor } from '../lib/client';
+import { urlFor } from '../../lib/client';
 
 const FooterBanner = ({footerBanner: {discount, largeText1, desc, largeText2, saleTime, smallText, midText, product, buttonText, image}}) => {
   return (

@@ -1,16 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-import Navbar from './Navbar';
+import MainNavbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({children}) => {
+const MainLayout = ({children}) => {
   return (
     <div className='layout'>
       <Head>
-        <title>The Highton</title>
+        <title>Highton</title>
       </Head>
       <header>
-        <Navbar />
+        <MainNavbar />
       </header>
       <main className='main-container'>
         {children}
@@ -22,4 +22,4 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout
+export default MainLayout
