@@ -7,7 +7,6 @@ from datetime import datetime
 from datetime import timedelta
 from dotenv import load_dotenv
 import os
-import time
 import pandas as pd
 
 app = Flask(__name__)
