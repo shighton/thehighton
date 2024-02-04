@@ -1,24 +1,27 @@
 import React from 'react'
 
 const Home = () => (
-    <div>
 
-      <div className='welcome'>
+  <div>
 
-        <h1 className='welcome-home'>Welcome</h1>
+    <div className='welcome'>
 
-        <p><a className='blue-links' href='/sabastian'>Learn more</a> about Sabastian or 
-        see the <a className='blue-links' href='/store'>new store</a></p>
+      <h1 className='welcome-home'>Welcome</h1>
 
-        <div className='home-pics'>
+      <p><a className='blue-links' href='/sabastian'>Learn more</a> about Sabastian or 
+      see the <a className='blue-links' href='/store'>new store</a></p>
 
-          <img className='home-img' src='resources/FAME_Bass.JPG'></img>
+      <div className='home-pics'>
 
-        </div>
+        <img className='home-img' src='resources/FAME_Bass.JPG'></img>
 
       </div>
 
+      <p>Check out <a className='blue-links' href='/monty'>Monty</a></p>
+
     </div>
+
+  </div>
 )
 
 export default Home

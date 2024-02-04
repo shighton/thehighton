@@ -98,6 +98,21 @@ a {
   pointer-events: none;
 }
 
+.monty-label {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+}
+
+.monty-position {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-container{
 max-width: 1400px; 
 margin: auto;

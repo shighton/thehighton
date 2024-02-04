@@ -24,6 +24,10 @@ const MainNavbar = () => {
           </p>
 
           <p className='menu-options'>
+            <Link href='/monty'>Monty</Link>
+          </p>
+
+          <p className='menu-options'>
             <Link href='/store'>Store</Link>
           </p>
 
@@ -57,6 +61,10 @@ const MainNavbar = () => {
             </p>
 
             <p id='menu-options3' className='menu-options'>
+              <Link href='/monty'>Monty</Link>
+            </p>
+
+            <p id='menu-options4' className='menu-options'>
               <Link href='/store'>Store</Link>
             </p>
 
@@ -79,6 +87,7 @@ const showMenuOptions = () => {
   document.getElementById('menu-options1').classList.toggle('toggle-visible');
   document.getElementById('menu-options2').classList.toggle('toggle-visible');
   document.getElementById('menu-options3').classList.toggle('toggle-visible');
+  document.getElementById('menu-options4').classList.toggle('toggle-visible');
   document.getElementById('menu-cart').classList.toggle('toggle-visible');
 }
 
