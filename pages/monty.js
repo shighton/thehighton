@@ -10,8 +10,11 @@ function index() {
     const [sell_high, setSell_high] = useState("Loading...")
     const [sma_buy, setSma_buy] = useState("Loading...")
 
+    const link = process.env.NEXT_PUBLIC_LOCAL_LINK;
+
     useEffect(() => {
-        fetch('http://localhost:8080/api/home').then(
+
+        fetch(link).then(
         reponse => reponse.json()
         ).then(
         data => {
