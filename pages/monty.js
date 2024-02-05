@@ -11,8 +11,7 @@ function index() {
     const [sma_buy, setSma_buy] = useState("Loading...")
 
     useEffect(() => {
-        // fetch('http://localhost:8080/api/home').then(
-        fetch('/api/home').then(
+        fetch('http://localhost:8080/api/home').then(
         reponse => reponse.json()
         ).then(
         data => {
