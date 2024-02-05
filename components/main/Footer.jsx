@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillInstagram, AiOutlineYoutube } from 'react-icons/ai';
+import { AiFillInstagram, AiOutlineYoutube, AiOutlineLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   return (
@@ -8,6 +8,7 @@ const Footer = () => {
       <p className='icons'>
         <a target='_blank' href='https://www.instagram.com/the.highton/'><AiFillInstagram /></a>
         <a target='_blank' href='https://youtube.com/@shighton?si=k-kvsBW1uREqGjxZ'><AiOutlineYoutube /></a>
+        <a target='_blank' href='https://www.linkedin.com/in/sabastian-highton/'><AiOutlineLinkedin /></a>
       </p>
     </div>
   )
