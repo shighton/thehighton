@@ -32,6 +32,7 @@ function index() {
 
             <div className='monty-label'>
                 <h1>Monty</h1>
+                <p>Hands off. Trade on.</p>
             </div>
 
             <div className='monty-position'>
@@ -45,6 +46,12 @@ function index() {
                 <p>Oversold: {oversold}</p>
                 <p>Sell High: {sell_high}</p>
                 <p>SMA Buy: {sma_buy}</p>
+            </div>
+
+            <div className='monty-exp'>
+                <p>Monty is a fully automated index trading algorithm leveraging constant computation on a live feed 
+                    of a market.</p>
+                <p>Auto-trading reimagined.</p>
             </div>
 
         </div>

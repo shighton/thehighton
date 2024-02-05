@@ -45,7 +45,12 @@ a {
   font-size: 3em;
 }
 
+.first-line {
+  margin-top: 2vw;
+}
+
 .home-pics {
+  margin-top: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,6 +61,10 @@ a {
   border-radius: 5vw;
   box-shadow: 1vw 1vw 2vw rgb(25, 0, 45);
   pointer-events: none;
+}
+
+.index-monty {
+  margin-top: 10vw;
 }
 
 .sabastian-intro {
@@ -72,6 +81,7 @@ a {
 }
 
 .abstract {
+  margin-top: 2vw;
   display: flex;
   flex-direction: column;
   gap: 2vw;
@@ -83,6 +93,7 @@ a {
   flex-direction: column;
   align-items: center;
   margin-top: 2vw;
+  margin-bottom: 2vw;
   gap: 2vw;
 }
 
@@ -107,10 +118,25 @@ a {
 }
 
 .monty-position {
-  margin-top: 2vw;
+  margin-top: 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.monty-data {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.monty-exp {
+  margin-top: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
 }
 
 .main-container{
