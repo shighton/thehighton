@@ -24,7 +24,7 @@ const MainNavbar = () => {
           </p>
 
           <p className='menu-options'>
-            <Link href='/monty'>Monty</Link>
+            <Link href='/projects'>Projects</Link>
           </p>
 
           <p className='menu-options'>
@@ -61,7 +61,7 @@ const MainNavbar = () => {
             </p>
 
             <p id='menu-options3' className='menu-options'>
-              <Link href='/monty'>Monty</Link>
+              <Link href='/projects'>Projects</Link>
             </p>
 
             <p id='menu-options4' className='menu-options'>

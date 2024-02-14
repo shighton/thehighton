@@ -56,6 +56,14 @@ function index() {
                 <p>Auto-trading reimagined.</p>
             </div>
 
+            {/* <py-script>print("Hello")</py-script> */}
+
+            <script type='py' src='./agent.py' config='./pyscript.toml'></script>
+
+            <button className='monty-start-btn' py-click="run()">Run</button>
+
+            <script type='py' terminal="true"></script>
+
         </div>
     )
 }

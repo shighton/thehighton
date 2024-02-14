@@ -19,6 +19,10 @@ h1 {
   color: white;
 }
 
+h2 {
+  color: white;
+}
+
 p {
   color: white;
 }
@@ -107,6 +111,42 @@ a {
 .head-grad {
   width: 50vw;
   pointer-events: none;
+}
+
+.projects-label {
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3em;
+}
+
+.projects-list {
+  margin-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vw;
+  margin-bottom: 2vw;
+}
+
+.project-monty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+
+.disclaimer {
+  color: lightgray;
+  font-size: 0.9em
+}
+
+.project-filelocker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
 }
 
 .monty-label {
