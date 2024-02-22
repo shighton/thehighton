@@ -5,7 +5,8 @@ from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
 from datetime import datetime
 from datetime import timedelta
-from dotenv import load_dotenv
+from py_dotenv import read_dotenv
+from pyscript import display
 import os
 import time
 import warnings
@@ -22,7 +23,7 @@ BASE_URL = "https://paper-api.alpaca.markets"
 # get environment variables (Create a .env file with Alpaca Keys for new users - Sabastian)
 
 try:
-    load_dotenv('../.env')
+    read_dotenv('../.env')
 except:
     pass
 
@@ -231,3 +232,5 @@ def run():
         else:
             print("Waiting for required data.")
             time.sleep(1200)
+
+
