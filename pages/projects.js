@@ -8,15 +8,14 @@ const Projects = () => (
             <div className='projects-list'>
 
                 <div className="project-monty">
-                    <h2>Monty</h2>
-                    <p>View the progress of a <a className="blue-links" href="/monty">live trading</a> algorithm</p>
+                    <h2><a className="blue-links" href="/monty">Monty</a></h2>
+                    <p>View the progress of a live trading algorithm</p>
                     <p className="disclaimer">*Currently implementing serverless function for public view- only works locally</p>
                 </div>
 
                 <div className="project-filelocker">
-                    <h2>File Locker</h2>
-                    <p>Interact with a blockchain-enhanced <a className='blue-links' href='/filelocker'>information 
-                    sharing</a> system</p>
+                    <h2><a className='blue-links' href='/filelocker'>File Locker</a></h2>
+                    <p>Blockchain-enhanced information sharing</p>
                 </div>
 
             </div>

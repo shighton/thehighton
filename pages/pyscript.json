@@ -1,3 +1,0 @@
-{
-    "packages" : ["datetime", "os", "time", "warnings", "pandas", "dotenv", "alpaca_trade_api.rest", "alpaca.data.timeframe", "alpaca.trading.client"]
-}
