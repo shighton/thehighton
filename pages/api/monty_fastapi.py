@@ -1,5 +1,6 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
+from typing import Union
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from alpaca.data.timeframe import TimeFrame
 from alpaca.trading.client import TradingClient
 from datetime import datetime
@@ -8,16 +9,29 @@ from dotenv import load_dotenv
 import os
 import pandas as pd
 
-app = Flask(__name__)
-CORS(app)
+app = FastAPI()
+
+origins = [
+    "http://localhost:3000",
+    "http://localhost:8000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 try:
     load_dotenv('../../.env')
 except:
     pass
 
-@app.route(os.getenv('SEND_LINK'), methods=['GET'])
-def return_home():
+
+@app.get("/")
+async def return_home():
 
     # Instantiate API Connection
     api = TradingClient(os.getenv('KEY_ID'), os.getenv('SECRET_KEY'), paper=True)
@@ -227,5 +241,8 @@ def return_home():
         "sell_high" : sellhi
     })
 
-if __name__ == '__main__':
-    app.run(port=8080)
+
+# @app.get("/items/{item_id}")
+# async def read_item(item_id: int, q: Union[str, None] = None):
+#     return {"item_id": item_id, "q": q}
+

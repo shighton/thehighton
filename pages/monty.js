@@ -54,6 +54,7 @@ function index() {
                 <p>Monty is a fully automated index trading algorithm leveraging constant computation on a live feed 
                     of a market.</p>
                 <p>Auto-trading reimagined.</p>
+                <a className='blue-links' target='_blank' href='https://github.com/shighton/DiamondEyes'>https://github.com/shighton/DiamondEyes</a>
             </div>
 
         </div>
