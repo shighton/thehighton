@@ -7,4 +7,6 @@ the backend of monty.</p>
 
 <p>Visit <a href='https://www.thehighton.com' target="_blank">The Highton</a>.</p>
 
-<p>Shop at the <a href='https://www.thehighton.com/store' target='_blank'>Store</a> for music.</p>
+<p>Shop at the <a href='https://www.thehighton.com/store' target='_blank'>store</a> for music.</p>
+
+<p>See other <a href='https://thehighton.com/projects' target='_blank'>projects</a> for more.</p>
