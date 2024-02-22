@@ -20,6 +20,8 @@ const FileLocker = () => (
             <p>File Locker is a blockchain-enhanced secure file sharing system.</p>
             <p>View the <a href='https://github.com/shighton/files_dapp' className='blue-links' 
             target='_blank'>GitHub</a> page.</p>
+
+            <p><a className='blue-links' href='/filetry'>Try Now</a></p>
         </div>
 
     </div>
