@@ -6,10 +6,10 @@ const Home = () => (
 
     <div className='welcome'>
 
-      <h1 className='welcome-home'>Welcome</h1>
+      <h1 className='welcome-home'>Welcome!</h1>
 
       <p className='first-line'><a className='blue-links' href='/sabastian'>Learn more</a> about Sabastian or 
-      see the <a className='blue-links' href='/store'>new store</a></p>
+      see the <a className='blue-links' href='/store'>new store</a>.</p>
 
       <div className='home-pics'>
 
@@ -17,7 +17,7 @@ const Home = () => (
 
       </div>
 
-      <p className='index-monty'>Check out the incoming <a className='blue-links' href='/monty'>Monty</a></p>
+      <p className='index-monty'>Check out the incoming <a className='blue-links' href='/projects'>projects</a>.</p>
 
     </div>
 

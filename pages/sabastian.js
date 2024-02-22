@@ -7,7 +7,7 @@ const Sabastian = () => (
 
         <div className='sabastian-intro'>
 
-            <h1 className='big-name' >Sabastian Highton</h1>
+            <h1 className='big-name'>Sabastian Highton</h1>
 
             <div className='abstract'>
 
@@ -21,14 +21,29 @@ const Sabastian = () => (
 
             </div>
 
-            <p>Download his resume <a className='blue-links' target='_blank' href='resources/Highton_Resume.pdf' download>here</a>.</p>
+            <p>Download his resume <a className='blue-links' target='_blank' 
+            href='resources/Highton_Resume.pdf' download>here</a>.</p>
 
             <div className='grad-images'>
 
                 <img className='fullbody-grad' src='resources/Fullbody_Grad.JPEG'></img>
-                {/* <img className='head-grad' src='resources/Head_Grad.JPEG'></img> */}
 
             </div>
+
+            <h1 className='big-name'>Music</h1>
+
+            <p>Listen to the music of Sabastian Highton on all major streaming platforms.</p>
+
+            <iframe
+            src="https://open.spotify.com/embed/artist/4OnCpjtl0a1UNKeVkLdPYI?utm_source=generator" 
+            width="100%" height="352" frameBorder="0" allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy"></iframe>
+
+            <p><a className='blue-links' target='_blank' 
+            href='https://music.apple.com/us/artist/sabastian-highton/1505555600'>Apple Music</a></p>
+
+            <p><a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a></p>
 
         </div>
 
