@@ -10,7 +10,7 @@ const Footer = () => {
         <a target='_blank' href="mailto:sthighton@gmail.com"><AiOutlineMail /></a>
         {/* <a target='_blank' href='https://www.instagram.com/the.highton/'><AiFillInstagram /></a> */}
         <a target='_blank' href='https://www.youtube.com/@shighton?si=k-kvsBW1uREqGjxZ'><AiOutlineYoutube /></a>
-        <a taget='_blank' href='https://www.github.com/shighton'><AiOutlineGithub /></a>
+        <a target='_blank' href='https://www.github.com/shighton'><AiOutlineGithub /></a>
       </p>
     </div>
   )
