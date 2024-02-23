@@ -36,14 +36,14 @@ const Sabastian = () => (
 
             <iframe
             src="https://open.spotify.com/embed/artist/4OnCpjtl0a1UNKeVkLdPYI?utm_source=generator" 
-            width="100%" height="352" frameBorder="0" allowfullscreen="" 
+            width="100%" height="352" allowFullScreen="" 
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy"></iframe>
+            loading="lazy" className='spotify'></iframe>
 
-            <p><a className='blue-links' target='_blank' 
-            href='https://music.apple.com/us/artist/sabastian-highton/1505555600'>Apple Music</a></p>
+            <p>Listen on <a className='blue-links' target='_blank' 
+            href='https://music.apple.com/us/artist/sabastian-highton/1505555600'>Apple Music</a>.</p>
 
-            <p><a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a></p>
+            <p>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
 
         </div>
 

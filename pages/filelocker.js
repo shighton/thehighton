@@ -21,7 +21,7 @@ const FileLocker = () => (
             <p>View the <a href='https://github.com/shighton/files_dapp' className='blue-links' 
             target='_blank'>GitHub</a> page.</p>
 
-            <p>You'll be able to <a className='blue-links' href='/'>click here</a> when it is deployed to the mainnet.</p>
+            {/* <p>You'll be able to <a className='blue-links' href='/'>click here</a> when it is deployed to the mainnet.</p> */}
         </div>
 
     </div>

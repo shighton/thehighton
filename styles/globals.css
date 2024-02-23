@@ -113,6 +113,10 @@ a {
   pointer-events: none;
 }
 
+.spotify {
+  border: 0px;
+}
+
 .projects-label {
   margin-top: 2vw;
   display: flex;

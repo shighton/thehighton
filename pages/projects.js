@@ -10,7 +10,7 @@ const Projects = () => (
                 <div className="project-monty">
                     <h2><a className="blue-links" href="/monty">Monty</a></h2>
                     <p>View the progress of a live trading algorithm</p>
-                    <p className="disclaimer">*Currently implementing serverless function for public view- only works locally</p>
+                    <p className="disclaimer">*Currently implementing serverless function for public view- only works locally.</p>
                 </div>
 
                 <div className="project-filelocker">
