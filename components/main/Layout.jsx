@@ -8,7 +8,6 @@ const MainLayout = ({children}) => {
     <div className='layout'>
       <Head>
         <title>Highton</title>
-        {/* <script type="module" src="https://pyscript.net/releases/2024.1.3/core.js"></script> */}
       </Head>
       <header>
         <MainNavbar />
