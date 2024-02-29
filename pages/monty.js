@@ -2,13 +2,23 @@ import React, {useEffect, useState} from 'react'
 
 function index() {
 
-    const [position, setPosition] = useState("Loading...")
+    const [position, setPosition] = useState(0)
     const [canBuy, setCanBuy] = useState("Loading...")
     const [canSell, setCanSell] = useState("Loading...")
     const [overbought, setOverbought] = useState("Loading...")
     const [oversold, setOversold] = useState("Loading...")
     const [sell_high, setSell_high] = useState("Loading...")
     const [sma_buy, setSma_buy] = useState("Loading...")
+    const [no_trades, setNoTrades] = useState("Loading...")
+
+    const [new_position, setNewPosition] = useState("Loading...")
+    const [error_msg, setErrorMsg] = useState("Loading...")
+
+    const [symbol, setSymbol] = useState("Loading...")
+    const [side, setSide] = useState("Loading...")
+    const [qty, setQty] = useState("Loading...")
+    const [last_buy, setLastBuy] = useState("Loading...")
+    const [latest_close, setLatestClose] = useState("Loading...")
 
     // const link = process.env.NEXT_PUBLIC_LOCAL_LINK;
     const link = 'https://v2taa67abriqebqobwglyewzhm0lwciy.lambda-url.us-east-1.on.aws/';
@@ -19,13 +29,23 @@ function index() {
         reponse => reponse.json()
         ).then(
         data => {
-            setPosition(data.position);
-            setCanBuy(data.can_buy);
-            setCanSell(data.can_sell);
-            setOverbought(data.sma_buy);
-            setOversold(data.overbought);
-            setSell_high(data.oversold);
-            setSma_buy(data.sell_high);
+            setPosition(data.truth_vals.position);
+            setCanBuy(data.truth_vals.able_buy);
+            setCanSell(data.truth_vals.able_sell);
+            setOverbought(data.truth_vals.should_buy_sma);
+            setOversold(data.truth_vals.o_bought);
+            setSell_high(data.truth_vals.o_sold);
+            setSma_buy(data.truth_vals.sell_high);
+            setNoTrades(data.truth_vals.no_trades_two_days);
+
+            setNewPosition(data.new_position);
+            setErrorMsg(data.error_msg);
+
+            setSymbol(data.order_info.symbol);
+            setSide(data.order_info.side);
+            setQty(data.order_info.quantity);
+            setLastBuy(data.order_info.last_buy);
+            setLatestClose(data.order_info.latest_close);
         }
         )
     }, [])
@@ -39,22 +59,33 @@ function index() {
             </div>
 
             <div className='monty-position'>
-                <h1>Position: {position}</h1>
+                <h1>Position: {position.toFixed(2)}</h1>
             </div>
 
             <div className='monty-data'>
+                <h2 className='monty-data-header'>Truth Values</h2>
                 <p>Can Buy: {canBuy}</p>
                 <p>Can Sell: {canSell}</p>
                 <p>Overbought: {overbought}</p>
                 <p>Oversold: {oversold}</p>
                 <p>Sell High: {sell_high}</p>
                 <p>SMA Buy: {sma_buy}</p>
+                <p>No Trades in Two Days: {no_trades}</p>
+
+                <h2 className='monty-data-header'>Order Info</h2>
+                <p>Symbol: {symbol}</p>
+                <p>Order Type: {side}</p>
+                <p>Quantity: {qty}</p>
+                <p>Last Buy Value: {last_buy}</p>
+                <p>Latest Closing Value: {latest_close}</p>
+                <p>New Position: {new_position}</p>
+                <p>Error Message: {error_msg}</p>
             </div>
 
             <div className='monty-exp'>
                 <p>Monty is a fully automated index trading algorithm leveraging constant computation on a live feed 
-                    of a market.</p>
-                <p>Auto-trading reimagined.</p>
+                    of the BTC market.</p>
+                <p>Simply refresh the page to see that Monty would do.</p>
                 <p>View the <a className='blue-links' target='_blank' href='https://github.com/shighton/DiamondEyes'>GitHub</a> page.</p>
             </div>
 

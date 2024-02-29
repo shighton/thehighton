@@ -9,8 +9,8 @@ const Projects = () => (
 
                 <div className="project-monty">
                     <h2><a className="blue-links" href="/monty">Monty</a></h2>
-                    <p>View the progress of a live trading algorithm</p>
-                    <p className="disclaimer">*Currently implementing serverless function for public view- only works locally.</p>
+                    <p>Consort a live BTC trading algorithm</p>
+                    <p className="disclaimer">*See what a live trading algorithm would do in the market.</p>
                 </div>
 
                 <div className="project-filelocker">
