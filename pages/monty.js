@@ -10,7 +10,8 @@ function index() {
     const [sell_high, setSell_high] = useState("Loading...")
     const [sma_buy, setSma_buy] = useState("Loading...")
 
-    const link = process.env.NEXT_PUBLIC_LOCAL_LINK;
+    // const link = process.env.NEXT_PUBLIC_LOCAL_LINK;
+    const link = 'https://v2taa67abriqebqobwglyewzhm0lwciy.lambda-url.us-east-1.on.aws/';
 
     useEffect(() => {
 
