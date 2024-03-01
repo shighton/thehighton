@@ -48,6 +48,7 @@ function index() {
             setLatestClose(data.order_info.latest_close);
         }
         )
+
     }, [])
 
     return (
