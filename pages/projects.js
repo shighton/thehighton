@@ -7,6 +7,12 @@ const Projects = () => (
 
             <div className='projects-list'>
 
+                <div className="project-rna">
+                    <h2><a className="blue-links" href="/rna">DA-RNA</a></h2>
+                    <p>Data Analysis of RNA Pairing Outcomes</p>
+                    <p className="disclaimer">*Excepted to IEEE SoutheastCon 2024.</p>
+                </div>
+
                 <div className="project-monty">
                     <h2><a className="blue-links" href="/monty">Monty</a></h2>
                     <p>Consort a live BTC trading algorithm</p>
