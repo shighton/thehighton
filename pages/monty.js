@@ -21,7 +21,7 @@ function index() {
     const [latest_close, setLatestClose] = useState("Loading...")
 
     // const link = process.env.NEXT_PUBLIC_LOCAL_LINK;
-    const link = 'https://v2taa67abriqebqobwglyewzhm0lwciy.lambda-url.us-east-1.on.aws/';
+    const link = 'https://a4b3seikge7ffzjhuljleppfee0jdsnr.lambda-url.us-east-1.on.aws/';
 
     useEffect(() => {
 
