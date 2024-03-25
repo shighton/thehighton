@@ -917,6 +917,16 @@ margin-top: 160px;
   }
 }
 
+@media screen and (min-width:1201px){
+  .hero-banner-image{
+    /* width: 0;
+    height: 0; */
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+
 @media screen and (max-width: 1200px){
   .hero-banner-image{
     width: 20vw;
