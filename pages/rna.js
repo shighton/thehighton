@@ -20,7 +20,7 @@ const RNA = () => (
                 <li>Used a convolutional neural network to determine likelihood of RNA pairing from the image files</li>
             </ol>
 
-            <p>Excepted to IEEE SoutheastCon 2024. Link coming when published.</p>
+            <p>Excepted to IEEE SoutheastCon 2024. <a href='https://ieeexplore.ieee.org/document/10500205'>Link to Publication</a></p>
         </div>
 
     </div>
