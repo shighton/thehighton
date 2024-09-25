@@ -17,7 +17,7 @@ const Home = () => (
 
       </div>
 
-      <p className='index-monty'>Check out the incoming <a className='blue-links' href='/projects'>projects</a>.</p>
+      <p className='index-monty'>Check out the updated <a className='blue-links' href='/projects'>projects</a>.</p>
 
     </div>
 
