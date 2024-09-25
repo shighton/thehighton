@@ -11,9 +11,9 @@ const Sabastian = () => (
 
             <div className='abstract'>
 
-                <p>Recent graduate in computer science seeking software development role to gain high quality experience.</p>
+                <p>IT professional with quality industry experience in computer repair.</p>
         
-                <p>Over four years of software development and data science.</p>
+                <p>Over four years of academic and self-learned knowledge of software development and data science.</p>
 
                 <p>Self-starter applying software development and machine learning models to real-world problems.</p>
 
@@ -21,18 +21,18 @@ const Sabastian = () => (
 
             </div>
 
-            <p>Download his resume <a className='blue-links' target='_blank' 
+            <p>Download my resume <a className='blue-links' target='_blank' 
             href='resources/Sabastian_Highton_Resume.pdf' download>here</a>.</p>
 
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='resources/Fullbody_Grad.JPEG'></img>
+                <img className='fullbody-grad' src='resources/FullbodyProf.jpg'></img>
 
             </div>
 
             <h1 className='big-name'>Music</h1>
 
-            <p>Listen to the music of Sabastian Highton on all major streaming platforms.</p>
+            <p>Listen to Sabastian Highton on all major streaming platforms.</p>
 
             <iframe
             src="https://open.spotify.com/embed/artist/4OnCpjtl0a1UNKeVkLdPYI?utm_source=generator" 
@@ -44,6 +44,18 @@ const Sabastian = () => (
             href='https://music.apple.com/us/artist/sabastian-highton/1505555600'>Apple Music</a>.</p>
 
             <p>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
+            
+            <div className='grad-images'>
+
+                <img className='fullbody-grad' src='resources/MeChicago.jpg'></img>
+
+            </div>
+
+            <div className='grad-images'>
+
+                <img className='fullbody-grad' src='resources/Fullbody_Grad.JPEG'></img>
+
+            </div>
 
         </div>
 
