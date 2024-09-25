@@ -22,7 +22,7 @@ const Sabastian = () => (
             </div>
 
             <p>Download his resume <a className='blue-links' target='_blank' 
-            href='resources/Sabastian-Highton-Resume.pdf' download>here</a>.</p>
+            href='resources/Sabastian_Highton_Resume.pdf' download>here</a>.</p>
 
             <div className='grad-images'>
 
