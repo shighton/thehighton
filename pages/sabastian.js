@@ -13,11 +13,11 @@ const Sabastian = () => (
 
                 <p>Recent graduate in computer science seeking software development role to gain high quality experience.</p>
         
-                <p>Over two years of software development and data science in a university environment.</p>
+                <p>Over four years of software development and data science.</p>
 
                 <p>Self-starter applying software development and machine learning models to real-world problems.</p>
 
-                <p>Graduated summa cum laude a year and a half early as a co-author of conference accepted research.</p>
+                <p>Graduated summa cum laude a year and a half early as a co-author of published research.</p>
 
             </div>
 
