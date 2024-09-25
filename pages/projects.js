@@ -8,8 +8,8 @@ const Projects = () => (
             <div className='projects-list'>
 
                 <div className="project-rna">
-                    <h2><a className="blue-links" href="/rna">DA-RNA</a></h2>
-                    <p>Data Analysis of RNA Pairing Outcomes</p>
+                    <h2><a className="blue-links" href="/rna">RNA Pairing Published Research</a></h2>
+                    <p>Academic research regarding RNA Pairing Outcomes</p>
                     <p className="disclaimer">*Excepted to IEEE SoutheastCon 2024.</p>
                 </div>
 

@@ -4,12 +4,12 @@ const RNA = () => (
     <div>
 
         <div className="rna-label">
-            <h1>DA-RNA</h1>
-            <p>Probable Pairing.</p>
+            <h1>RNA Pairing</h1>
+            <p>Predictive Intelligence.</p>
         </div>
 
         <div className="rna-info">
-            <p>This project is a data analysis of RNA Pairing Outcomes.</p>
+            <p>This research poses a novel image-based machine learning architecture to predict miRNA and mRNA pairing outcomes.</p>
             <p>My Role</p>
 
             <ol className="rna-ol">
