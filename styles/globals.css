@@ -238,6 +238,17 @@ a {
   gap: 1vw;
 }
 
+.tableau-img {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tableau-prntscrn-img {
+  height: 30vw;
+}
+
 .main-container{
 max-width: 1400px; 
 margin: auto;
