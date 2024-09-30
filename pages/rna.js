@@ -8,6 +8,10 @@ const RNA = () => (
             <p>Predictive Intelligence.</p>
         </div>
 
+        <div className="rna-img">
+            <img className="rna-model-img" src="resources/rna_ai_model_pic.png"></img>
+        </div>
+
         <div className="rna-info">
             <p>This research poses a novel image-based machine learning architecture to predict miRNA and mRNA pairing outcomes.</p>
             <p>My Role</p>
