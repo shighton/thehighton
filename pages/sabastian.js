@@ -11,13 +11,13 @@ const Sabastian = () => (
 
             <div className='abstract'>
 
-                <p>IT professional with quality industry experience in computer repair.</p>
+                <p>IT professional with a love for data and quality industry experience in computer repair.</p>
         
-                <p>Over four years of academic and self-learned knowledge of software development and data science.</p>
+                <p>Over four years of academic and self-learned knowledge of data science.</p>
 
-                <p>Self-starter applying software development and machine learning models to real-world problems.</p>
+                <p>Self-starter applying data analysis and machine learning models to real-world problems.</p>
 
-                <p>Graduated summa cum laude a year and a half early as a co-author of published research.</p>
+                <p>Graduated summa cum laude a year and a half early as a co-author of <a href='https://ieeexplore.ieee.org/document/10500205' className='blue-links' target='_blank'>published research</a> in AI.</p>
 
             </div>
 
