@@ -13,6 +13,10 @@ const FileLocker = () => (
             <img className="tableau-prntscrn-img" src="resources/Tableau_Executive_Overview.png"></img>
         </div>
 
+        <div className="filelocker-info">
+            <p>See other <a href='/projects' className='blue-links'>projects</a>.</p>
+        </div>
+
     </div>
 )
 

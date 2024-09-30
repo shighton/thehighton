@@ -21,6 +21,8 @@ const RNA = () => (
             </ol>
 
             <p>Excepted to IEEE SoutheastCon 2024. <a href='https://ieeexplore.ieee.org/document/10500205' className='blue-links' target='_blank'>Link to Publication</a></p>
+
+            <p>See other <a href='/projects' className='blue-links'>projects</a>.</p>
         </div>
 
     </div>

@@ -9,7 +9,7 @@ const Home = () => (
       <h1 className='welcome-home'>Welcome!</h1>
 
       <p className='first-line'><a className='blue-links' href='/sabastian'>Learn more</a> about Sabastian or 
-      see the <a className='blue-links' href='/store'>new store</a>.</p>
+      check out the updated <a className='blue-links' href='/projects'>projects</a>.</p>
 
       <div className='home-pics'>
 
@@ -17,7 +17,7 @@ const Home = () => (
 
       </div>
 
-      <p className='index-monty'>Check out the updated <a className='blue-links' href='/projects'>projects</a>.</p>
+      <p className='index-monty'>Check out the music <a className='blue-links' href='/store'>store</a>.</p>
 
     </div>
 

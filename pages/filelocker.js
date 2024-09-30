@@ -22,6 +22,8 @@ const FileLocker = () => (
             target='_blank'>GitHub</a> page.</p>
 
             {/* <p>You'll be able to <a className='blue-links' href='/'>click here</a> when it is deployed to the mainnet.</p> */}
+
+            <p>See other <a href='/projects' className='blue-links'>projects</a>.</p>
         </div>
 
     </div>

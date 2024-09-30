@@ -57,6 +57,8 @@ const Sabastian = () => (
 
             </div>
 
+            <p>Check out my <a className='blue-links' href='/projects'>projects</a>.</p>
+
         </div>
 
     </div>

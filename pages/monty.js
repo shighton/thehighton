@@ -87,6 +87,8 @@ function index() {
                     of the BTC market.</p>
                 <p>Simply refresh the page to see that Monty would do.</p>
                 <p>View the <a className='blue-links' target='_blank' href='https://github.com/shighton/DiamondEyes'>GitHub</a> page.</p>
+
+                <p>See other <a href='/projects' className='blue-links'>projects</a>.</p>
             </div>
 
         </div>
