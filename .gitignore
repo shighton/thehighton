@@ -31,4 +31,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-.csv
+# any large csv files
+/*.csv/
