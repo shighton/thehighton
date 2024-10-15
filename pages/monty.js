@@ -83,9 +83,11 @@ function index() {
             </div>
 
             <div className='monty-exp'>
-                <p>Monty is a fully automated index trading algorithm leveraging constant computation on a live feed 
+                <p>Monty was a fully automated index trading algorithm leveraging constant computation on a live feed 
                     of the BTC market.</p>
-                <p>Simply refresh the page to see that Monty would do.</p>
+                <p>You would simply refresh the page to see that Monty would do.</p>
+                <p>Monty used AWS Lambda in the backend, and the free tier has since expired.</p>
+                <p>Therefore, Monty has been retired as a live trading agent.</p>
                 <p>View the <a className='blue-links' target='_blank' href='https://github.com/shighton/DiamondEyes'>GitHub</a> page.</p>
 
                 <p>See other <a href='/projects' className='blue-links'>projects</a>.</p>
