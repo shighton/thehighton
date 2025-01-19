@@ -4,7 +4,7 @@ import { AiFillInstagram, AiOutlineYoutube, AiOutlineLinkedin, AiOutlineMail, Ai
 const Footer = () => {
   return (
     <div className='footer-container'>
-      <p>2024 - The Highton - All Rights Reserved</p>
+      <p>2025 - The Highton - All Rights Reserved</p>
       <p className='icons'>
         <a target='_blank' href='https://www.linkedin.com/in/sabastian-highton/'><AiOutlineLinkedin /></a>
         <a target='_blank' href="mailto:sthighton@gmail.com"><AiOutlineMail /></a>
