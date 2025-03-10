@@ -11,9 +11,9 @@ const Sabastian = () => (
 
             <div className='abstract'>
 
-                <p>IT professional with a love for data and quality industry experience in computer repair.</p>
+                <p>IT professional with quality industry experience in computer repair and a love for creativity.</p>
         
-                <p>Over four years of academic and self-learned knowledge of data science.</p>
+                <p>Over four years of academic and self-learned knowledge of computer science.</p>
 
                 <p>Self-starter applying data analysis and machine learning models to real-world problems.</p>
 
@@ -22,7 +22,7 @@ const Sabastian = () => (
             </div>
 
             <p>Download my resume <a className='blue-links' target='_blank' 
-            href='resources/Sabastian-Highton_Resume.pdf' download>here</a>.</p>
+            href='resources/2025_Sabastian-Highton_Resume.pdf' download>here</a>.</p>
 
             <div className='grad-images'>
 
