@@ -9,7 +9,6 @@ const MainLayout = ({children}) => {
     <div className='layout'>
       <Head>
         <title>Sabastian Highton</title>
-        <Analytics />
       </Head>
       <header>
         <MainNavbar />
@@ -19,6 +18,7 @@ const MainLayout = ({children}) => {
       </main>
       <footer>
         <Footer />
+        <Analytics />
       </footer>
     </div>
   )
