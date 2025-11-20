@@ -26,11 +26,11 @@ const Sabastian = () => (
 
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='resources/meprof.jpg'></img>
+                <img className='fullbody-grad' src='resources/bwfullbodyavalon.jpg'></img>
 
             </div>
 
-            <h1 className='big-name'>Music</h1>
+            <h1 className='big-sth'>Music</h1>
 
             <p>Listen to Sabastian Highton on all major streaming platforms.</p>
 
@@ -44,10 +44,12 @@ const Sabastian = () => (
             href='https://music.apple.com/us/artist/sabastian-highton/1505555600'>Apple Music</a>.</p>
 
             <p>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
+
+            <h1 className='big-sth'>Photos</h1>
             
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='resources/FullbodyProf.jpg'></img>
+                <img className='fullbody-grad' src='resources/meprof.jpg'></img>
 
             </div>
 

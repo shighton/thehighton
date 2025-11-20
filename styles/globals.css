@@ -47,10 +47,16 @@ a {
 
 .welcome-home {
   font-size: 3em;
+  color: rgb(106, 83, 255);
+  text-shadow: 1px 1px 2px rgb(160, 83, 255);
+}
+
+.welcome-interests {
+  color: rgb(160, 83, 255);
 }
 
 .first-line {
-  margin-top: 2vw;
+  margin-top: 1vw;
 }
 
 .home-pics {
@@ -82,6 +88,14 @@ a {
 
 .big-name {
   font-size: 3em;
+  color: rgb(101, 96, 255);
+  text-shadow: 1px 1px 2px white;
+}
+
+.big-sth {
+  font-size: 3em;
+  color: rgb(160, 83, 255);
+  text-shadow: 1px 1px 2px white;
 }
 
 .abstract {
@@ -345,7 +359,8 @@ width: 100%;
 }
 
 .menu-options {
-  color: rgb(255, 255, 255);
+  color: rgb(238, 224, 255);
+  text-shadow: 1px 1px 2px rgb(160, 83, 255);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
