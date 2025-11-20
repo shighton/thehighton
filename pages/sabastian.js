@@ -26,7 +26,7 @@ const Sabastian = () => (
 
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='resources/FullbodyProf.jpg'></img>
+                <img className='fullbody-grad' src='resources/meprof.jpg'></img>
 
             </div>
 
@@ -47,7 +47,7 @@ const Sabastian = () => (
             
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='resources/MeChicago.jpg'></img>
+                <img className='fullbody-grad' src='resources/FullbodyProf.jpg'></img>
 
             </div>
 
