@@ -6,6 +6,9 @@ import {Product, FooterBanner, HeroBanner} from '../components'
 
 const Store = ({products, bannerData}) => (
     <div>
+
+      <h1 className='big-store-closed'>Store currently closed.</h1>
+
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
       <div className='products-heading'>

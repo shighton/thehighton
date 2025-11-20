@@ -92,6 +92,12 @@ a {
   text-shadow: 1px 1px 2px white;
 }
 
+.big-store-closed {
+  font-size: 3em;
+  color: red;
+  text-shadow: 1px 1px 2px white;
+}
+
 .big-sth {
   font-size: 3em;
   color: rgb(160, 83, 255);
