@@ -55,6 +55,10 @@ a {
   color: rgb(160, 83, 255);
 }
 
+.must-login {
+  color: rgb(242, 231, 255);
+}
+
 .first-line {
   margin-top: 1vw;
 }
@@ -364,11 +368,112 @@ width: 100%;
   font-size: 1.6em;
 }
 
+.account-button {
+  color: white;
+  padding: 15px 25px;
+  font-size: 24px;
+  border: none;
+  background-color: #3c1b82;
+  border-radius: 15px;
+  box-shadow: 0 5px #555;
+}
+
+.account-button:active {
+  box-shadow: 0 2px #333;
+  transform: translateY(3px);
+}
+
+.nav-account {
+  color: rgb(238, 224, 255);
+  padding: 0px 15px;
+  background-color: rgb(106, 83, 255);
+  text-decoration: underline;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px #555;
+}
+
+.nav-account:active {
+  box-shadow: 0 1px #333;
+  transform: translateY(1px);
+}
+
 .menu-options {
   color: rgb(238, 224, 255);
   text-shadow: 1px 1px 2px rgb(160, 83, 255);
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.responsive-form {
+  max-width: 600px;
+  color: white;
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid #5339ff;;
+  background-color:  #6a55a1;
+  padding: 20px;
+}
+
+.upload-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.upload-form-label {
+  min-width: 48%;
+  margin-bottom: 10px;
+}
+
+.upload-form-input[type=text], select {
+  min-width: 45%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.upload-form-submit {
+  width: 100%;
+  background-color: #310d5f;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.track-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+}
+
+.track-title {
+  color: white;
+  padding: 20px;
+}
+
+.track-info span {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+audio {
+  width: 15vw;
 }
 
 .cart-icon{
@@ -1014,6 +1119,11 @@ margin-top: 160px;
     }
 
     .menu-options {
+      visibility: hidden;
+      display: none;
+    }
+
+    .nav-account {
       visibility: hidden;
       display: none;
     }

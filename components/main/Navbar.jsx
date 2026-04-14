@@ -1,12 +1,16 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
-import {AiOutlineShopping} from 'react-icons/ai';
-import {AiOutlineMenu} from "react-icons/ai";
-import {Cart} from '..';
-import {useStateContext} from '../../context/stateContext';
+import { AiOutlineShopping } from 'react-icons/ai';
+import { AiOutlineMenu } from "react-icons/ai";
+import { Cart } from '..';
+import { useStateContext } from '../../context/stateContext';
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 const MainNavbar = () => {
     const {showCart, setShowCart, totalQuantities} = useStateContext();
+    const { data: session } = useSession();
     return (
       <div>
         <div className='navbar-container'>
@@ -20,23 +24,31 @@ const MainNavbar = () => {
           </p>
 
           <p className='menu-options'>
+            <Link href='/dashboard'>Dashboard</Link>
+          </p>
+
+          <p className='menu-options'>
             <Link href='/sabastian'>Sabastian</Link>
           </p>
 
-          <p className='menu-options'>
-            <Link href='/projects'>Projects</Link>
-          </p>
-
-          <p className='menu-options'>
+          {/* <p className='menu-options'>
             <Link href='/store'>Store</Link>
-          </p>
+          </p> */}
 
-          <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
+          {session ? (
+            <>
+              <button className='nav-account' onClick={() => signOut()}>Log Out</button>
+            </>
+          ) : (
+            <button className='nav-account' onClick={() => signIn('google')}>Log In</button>
+          )}
+
+          {/* <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
             <AiOutlineShopping />
             <span className='cart-item-qty'>{totalQuantities}</span>
           </button>
 
-          {showCart && <Cart />}
+          {showCart && <Cart />} */}
 
         </div>
 
@@ -57,23 +69,31 @@ const MainNavbar = () => {
             </p>
 
             <p id='menu-options2' className='menu-options'>
-              <Link href='/sabastian'>Sabastian</Link>
+              <Link href='/dashboard'>Dashboard</Link>
             </p>
 
             <p id='menu-options3' className='menu-options'>
-              <Link href='/projects'>Projects</Link>
+              <Link href='/sabastian'>Sabastian</Link>
             </p>
 
-            <p id='menu-options4' className='menu-options'>
+            {/* <p id='menu-options4' className='menu-options'>
               <Link href='/store'>Store</Link>
-            </p>
+            </p> */}
 
-            <button id='menu-cart' type='button' className='cart-icon' onClick={() => setShowCart(true)}>
+            {session ? (
+              <>
+                <button id='menu-options4' className='nav-account' onClick={() => signOut()}>Sign Out</button>
+              </>
+            ) : (
+              <button id='menu-options4' className='nav-account' onClick={() => signIn('google')}>Sign In</button>
+            )}
+
+            {/* <button id='menu-cart' type='button' className='cart-icon' onClick={() => setShowCart(true)}>
               <AiOutlineShopping />
               <span className='cart-item-qty'>{totalQuantities}</span>
             </button>
 
-            {showCart && <Cart />}
+            {showCart && <Cart />} */}
 
           </div>
           
@@ -88,7 +108,7 @@ const showMenuOptions = () => {
   document.getElementById('menu-options2').classList.toggle('toggle-visible');
   document.getElementById('menu-options3').classList.toggle('toggle-visible');
   document.getElementById('menu-options4').classList.toggle('toggle-visible');
-  document.getElementById('menu-cart').classList.toggle('toggle-visible');
+  // document.getElementById('menu-cart').classList.toggle('toggle-visible');
 }
 
 export default MainNavbar

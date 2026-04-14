@@ -1,17 +1,20 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
-import {MainLayout} from '../components/';
+import { MainLayout } from '../components/';
+import { StateContext } from '../context/stateContext';
+import { SessionProvider } from 'next-auth/react';
 
 import '../styles/globals.css';
-import { StateContext } from '../context/stateContext';
 
 function App({ Component, pageProps }) {
   return (
     <StateContext>
-      <MainLayout>
-        <Toaster />
-        <Component {...pageProps} />
-      </MainLayout>
+      <SessionProvider session={pageProps.session}>
+        <MainLayout>
+          <Toaster />
+          <Component {...pageProps} />
+        </MainLayout>
+      </SessionProvider>
     </StateContext>
   )
 }

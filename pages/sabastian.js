@@ -45,6 +45,15 @@ const Sabastian = () => (
 
             <p>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
 
+            <h1 className='big-sth'>Travel</h1>
+
+            <div className='grad-images'>
+
+                <img className='fullbody-grad' src='resources/MapChart_Map.png'></img>
+                <p>I have been to 46 states. I have lived in WI and GA. Sorry if you like ND or LA.</p>
+
+            </div>
+
             <h1 className='big-sth'>Photos</h1>
             
             <div className='grad-images'>
@@ -59,7 +68,7 @@ const Sabastian = () => (
 
             </div>
 
-            <p>Check out my <a className='blue-links' href='/projects'>projects</a>.</p>
+            <p>Here are some old <a className='blue-links' href='/projects'>projects</a>.</p>
 
         </div>
 
