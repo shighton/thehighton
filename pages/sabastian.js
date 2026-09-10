@@ -50,7 +50,7 @@ const Sabastian = () => (
             <div className='grad-images'>
 
                 <img className='fullbody-grad' src='resources/MapChart_Map.png'></img>
-                <p>I have been to 46 states. I have lived in WI and GA. Sorry if you like ND or LA.</p>
+                <p>I have been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA. </p>
 
             </div>
 
