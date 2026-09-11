@@ -750,9 +750,6 @@ audio {
   border: none;
   background-color: transparent;
 }
-.cart-icon:hover{
-  /*transform: scale(1.1,1.1);*/
-}
 .cart-item-qty{
   position: absolute;
   right: -8px;
@@ -780,9 +777,6 @@ audio {
   transition: transform 0.5s ease;
  color: #82adff;
  /* margin-left: 7vw; */
-}
-.product-card:hover{
-  /*transform: scale(1.1,1.1)*/
 }
 .product-image{
   border-radius: 15px;
@@ -1106,9 +1100,6 @@ padding: 20px 10px;
     transform: scale(1, 1);
   transition: transform 0.5s ease;
 }
-.btn:hover{
-  /*transform: scale(1.1,1.1);*/
-}
 .product-detail-container{
   display: flex;
  gap: 40px;
@@ -1198,9 +1189,6 @@ padding: 20px 10px;
    transform: scale(1, 1);
   transition: transform 0.5s ease;
 }
-.buttons .add-to-cart:hover{
-  /*transform:scale(1.1,1.1)*/
-}
 .buttons .buy-now{
   width: 200px;
   padding: 10px 20px;
@@ -1213,9 +1201,6 @@ padding: 20px 10px;
   cursor: pointer;
    transform: scale(1, 1);
   transition: transform 0.5s ease;
-}
-.buttons .buy-now:hover{
-  /*transform:scale(1.1,1.1)*/
 }
 .quantity-desc{
   border: 1px solid gray;
@@ -1409,9 +1394,6 @@ margin-top: 160px;
       right: auto;
     }
 
-    .hero-banner-container{
-      /* height: 100vw; */
-    }
     .banner-desc {
       gap: 20px;
       flex-direction: column;
@@ -1462,10 +1444,6 @@ margin-top: 160px;
       top: 10vw;
       right: 5%;
     }
-    .footer-banner-container{
-      /* height: 560px; */
-      /* margin-top: 80px; */
-    }
     .footer-banner-image{
       width: 77%;
       left: 30%;
@@ -1491,9 +1469,6 @@ margin-top: 160px;
     }
     .hero-banner-container{
       line-height: 1.2;
-    }
-    .hero-banner-container p{
-      /* margin-left: 20vw; */
     }
     .hero-banner-container h1{
       font-size: 2em;
