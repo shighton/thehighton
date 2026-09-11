@@ -21,18 +21,13 @@ const Sabastian = () => (
 
             </div>
 
-            <p>Download my resume <a className='blue-links' target='_blank' 
-            href='resources/2025_Sabastian-Highton_Resume_.pdf' download>here</a>.</p>
+            <p className='first-line'><b>*Download my work resume </b><a className='blue-links' target='_blank' 
+            href='resources/2025_Sabastian-Highton_Resume_.pdf' download><b>here</b></a><b>.*</b></p>
 
-            <div className='grad-images'>
-
-                <img className='fullbody-grad' src='resources/bwfullbodyavalon.jpg'></img>
-
-            </div>
 
             <h1 className='big-sth'>Music</h1>
 
-            <p>Listen to Sabastian Highton on all major streaming platforms.</p>
+            <p className='first-line'>Listen to Sabastian Highton on all major streaming platforms.</p>
 
             <iframe
             src="https://open.spotify.com/embed/artist/4OnCpjtl0a1UNKeVkLdPYI?utm_source=generator" 
@@ -40,23 +35,29 @@ const Sabastian = () => (
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy" className='spotify'></iframe>
 
-            <p>Listen on <a className='blue-links' target='_blank' 
+            <p className='first-line'>Listen on <a className='blue-links' target='_blank' 
             href='https://music.apple.com/us/artist/sabastian-highton/1505555600'>Apple Music</a>.</p>
 
-            <p>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
+            <p className='first-line'>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
 
             <h1 className='big-sth'>Travel</h1>
 
             <div className='grad-images'>
 
-                <img className='fullbody-grad' src='resources/MapChart_Map.png'></img>
-                <p>I have been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA. </p>
+                <img className='travel-grad' src='resources/MapChart_Map.png'></img>
+                <p className='first-line'>I have been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA. </p>
 
             </div>
 
             <h1 className='big-sth'>Photos</h1>
             
             <div className='grad-images'>
+
+                <img className='fullbody-grad' src='resources/bwfullbodyavalon.jpg'></img>
+
+            </div>
+
+            {/* <div className='grad-images'>
 
                 <img className='fullbody-grad' src='resources/meprof.jpg'></img>
 
@@ -66,9 +67,9 @@ const Sabastian = () => (
 
                 <img className='fullbody-grad' src='resources/Fullbody_Grad.JPEG'></img>
 
-            </div>
+            </div> */}
 
-            <p>Here are some old <a className='blue-links' href='/projects'>projects</a>.</p>
+            <p className='first-line'>Here are some old <a className='blue-links' href='/projects'>projects</a>.</p>
 
         </div>
 

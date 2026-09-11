@@ -35,13 +35,13 @@ export default function MusicUploadForm() {
         <div className='responsive-form'>
             <form className='upload-form' onSubmit={handleSubmit}>
                 <label className='upload-form-label'>Artist Name:</label>
-                <input className='upload-form-input' type='text' placeholder='Name of artist in playlist' name='artistName' value={artistName} onChange={e => setArtistName(e.target.value)} required />
+                <input className='upload-form-input' type='text' placeholder='Enter artist name' name='artistName' value={artistName} onChange={e => setArtistName(e.target.value)} required />
 
                 <label className='upload-form-label'>Track Name:</label>
-                <input className='upload-form-input' type='text' placeholder='Name of track in playlist' name='trackName' value={trackName} onChange={e => setTrackName(e.target.value)} required />
+                <input className='upload-form-input' type='text' placeholder='Enter track name' name='trackName' value={trackName} onChange={e => setTrackName(e.target.value)} required />
 
                 <label className='upload-form-label'>Genre:</label>
-                <select onChange={e => setGenre(e.target.value)} required>
+                <select className='select-upload' onChange={e => setGenre(e.target.value)} required>
                     <option>AI Slop</option>
                     <option>Alternative</option>
                     <option>Classical</option>
@@ -60,7 +60,10 @@ export default function MusicUploadForm() {
                 </select>
 
                 <label className='upload-form-label'>File:</label>
-                <input className='upload-form-input' type='file' name='track' accept='audio/*' onChange={e => setFile(e.target.files[0])} required />
+                <label className='upload-form-file-label'>
+                    Choose File
+                    <input className='upload-form-input' type='file' name='track' accept='audio/*' onChange={e => setFile(e.target.files[0])} required />
+                </label>
 
                 {/* <input type='text' placeholder='What artist is most similar?' name='adjacentArtist' value={artist} onChange={e => setArtist(e.target.value)} required /> */}
                 

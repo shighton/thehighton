@@ -19,7 +19,7 @@ const Home = () => (
 
       </div>
 
-      <p>Issue? Email below.</p>
+      <p className='first-line'>Issue? Email below.</p>
 
       {/* <p className='index-monty'>Music <a className='blue-links' href='/store'>store</a> currently closed.</p> */}
 

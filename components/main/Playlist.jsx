@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { TrackRow } from './TrackRow';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 export default function Playlist() {
     const [tracks, setTracks] = useState([]);
@@ -7,7 +9,7 @@ export default function Playlist() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentTrack, setCurrentTrack] = useState(0);
 
-    const audioRefs = useRef([]);
+    const audioRef = useRef(null);
 
     useEffect(() => {
         fetch('/api/tracks/')
@@ -19,33 +21,73 @@ export default function Playlist() {
     }, []);
 
     const playPlaylist = () => {
+        const audio = audioRef.current;
+
+        if (!audio || tracks.length === 0) return;
+
         if (isPlaying) {
-            audioRefs.current[currentTrack]?.pause();
+            audio.audio.current?.pause();
             setIsPlaying(false);
-        } else if (tracks.length > 0) {
-            audioRefs.current[currentTrack]?.play();
+        } else {
+            audio.audio.current?.play();
             setIsPlaying(true);
         }
     };
 
-    const handleTrackEnd = (index) => {
-        const nextIndex = index + 1;
+    const playTrack = (index) => {
+        const audio = audioRef.current;
+
+        if (!audio) return;
+
+        setCurrentTrack(index);
+
+        setTimeout(() => {
+            audio.audio.current?.play();
+            setIsPlaying(true);
+        }, 0);
+    };
+
+    const handleTrackEnd = () => {
+        const nextIndex = currentTrack + 1;
 
         if (nextIndex < tracks.length) {
             setCurrentTrack(nextIndex);
-            audioRefs.current[nextIndex]?.play();
+            setIsPlaying(true);
         } else {
             setIsPlaying(false);
         }
     };
 
-    if (loading) return <p>Loading playlist...</p>;
+    useEffect(() => {
+        const audio = audioRef.current;
+
+        if (!audio || tracks.length === 0 || !isPlaying) return;
+
+        audio.audio.current?.load();
+
+        audio.audio.current?.play().catch(error => {
+            console.log('Playback failure: ', error);
+            setIsPlaying(false);
+        });
+    }, [currentTrack]);
+
+    if (loading) return <p className='first-line'>Loading playlist...</p>;
 
     return (
         <div className='playlist'>
-            <div className='playlist-button'>
-                <button className='play-playlist' onClick={playPlaylist}>{!isPlaying ? '▶ Play' : '❚❚ Pause'}</button>
-            </div>
+            <h2 className='now-playing-title'>{tracks[currentTrack].name.replace(/\[\"/, '').replace(/\"\]/, '')} - {tracks[currentTrack].artistName.replace(/\[\"/, '').replace(/\"\]/, '')}</h2>
+
+            <AudioPlayer
+                className='highton-player'
+                ref={audioRef}
+                src={tracks[currentTrack]?.url}
+                onPlay={() => setIsPlaying(true)}
+                onPause={() => setIsPlaying(false)}
+                onEnded={handleTrackEnd}
+                autoPlay={isPlaying}
+                showSkipControls={false}
+                showJumpControls={true}
+            />
 
             <div className='playlist-header'>
                 <h2>Name</h2>
@@ -53,6 +95,7 @@ export default function Playlist() {
                 <h2>Genre</h2>
                 <h2>Audio</h2>
             </div>
+
             {tracks.length === 0 || tracks[tracks.length - 1].name === '.emptyFolderPlaceholder' ? (
                 <p>No tracks in playlist.</p>
             ) : (
@@ -60,14 +103,24 @@ export default function Playlist() {
                     <TrackRow
                         key={track.url}
                         track={track}
-                        index={index}
-                        audioRef={el => audioRefs.current[index] = el}
-                        onTrackClick={() => setCurrentTrack(index)}
-                        onEnded={() => handleTrackEnd(index)}
+                        isPlaying={isPlaying && currentTrack === index}
+                        onPlay={() => {
+                            if (isPlaying && currentTrack === index) {
+                                audioRef.current?.audio.current?.pause();
+                                setIsPlaying(false);
+                            } else {
+                                playTrack(index)
+                            }
+                        }}
                     />
                 ))
             )}
-            <p className='playlist-subtext'>Playlist is randomized every render.</p>
+
+            <div className='playlist-button'>
+                <button className='play-playlist' onClick={playPlaylist}>{!isPlaying ? '▶ Play' : '❚❚ Pause'}</button>
+            </div>
+
+            <p className='playlist-subtext'>Playlist is randomized on refresh.</p>
         </div>
     );
 }

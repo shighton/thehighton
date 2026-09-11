@@ -1,4 +1,4 @@
-export function TrackRow({ track, audioRef, onTrackClick, onEnded }) {
+export function TrackRow({ track, isPlaying, onPlay }) {
     return (
         <div className='track-row'>
             
@@ -10,14 +10,18 @@ export function TrackRow({ track, audioRef, onTrackClick, onEnded }) {
 
             <p className="track-title">{(track.genre).replace(/\[\"/, '').replace(/\"\]/, '')}</p>
 
-            <audio
+            <button className='track-play-button' onClick={onPlay}>
+                {isPlaying ? '❚❚' : '▶'}
+            </button>
+
+            {/* <audio
                 ref={audioRef}
                 controls
                 preload='none'
                 src={track.url}
                 onPlay={onTrackClick}
                 onEnded={onEnded}
-            ></audio>
+            ></audio> */}
 
         </div>
     );

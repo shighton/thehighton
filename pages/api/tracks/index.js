@@ -15,13 +15,6 @@ export default async function handler(req, res) {
     const tracksWithUrls = await Promise.all(data
         .filter(file => file.name !== '.emptyFolderPlaceholder')
         .map(async file => {
-            const fullPath = file.name;
-
-            const { data: urlData } = supabase
-                .storage
-                .from('tracks')
-                .getPublicUrl(fullPath);
-
             const {data: fileName, fileNameError} = await supabase
                 .from('Tracks')
                 .select('fileTrackName')
@@ -40,24 +33,16 @@ export default async function handler(req, res) {
                 .eq('fileName', file.name)
                 .single()
 
-            // console.log(fileName.fileTrackName, urlData.publicUrl);
-
             return {
                 name: fileName.fileTrackName,
-                url: urlData.publicUrl,
+                url: `/api/tracks/audio?file=${encodeURIComponent(file.name)}`,
                 artistName: artistName.fileArtistName,
                 genre: genre.fileGenre,
             };
         })
     );
 
-    // console.log(tracksWithUrls);
-
     const shuffledTracks = shuffleArray(tracksWithUrls);
-
-    // console.log(shuffledTracks);
-
-    // console.log(data);
 
     res.status(200).json(shuffledTracks);
 }

@@ -17,7 +17,7 @@ export default function Dashboard() {
                 <button className='account-button' onClick={() => signIn('google')}>Log In With Google</button>
                 <p className='must-login'>In the meantime, here's a Malibu seagull looking wistfully into the distant ocean waves.</p>
                 <div className='grad-images'>
-                    <img className='fullbody-grad' src='resources/Bird.jpg'></img>
+                    <img className='login-grad' src='resources/Bird.jpg'></img>
                 </div>
             </div>
         );
@@ -29,9 +29,9 @@ export default function Dashboard() {
             <h1 className='big-sth'>The Playlist</h1>
             <Playlist/>
             <h1 className='big-sth'>Upload</h1>
-            <p><b>*One upload</b> or all your tracks will be deleted. All tracks are <b>PUBLIC</b> for download.*</p>
+            <p className='first-line'><b>*One upload</b> or all your tracks will be deleted. All tracks are <b>PUBLIC</b> for download.*</p>
             <MusicUploadForm/>
-            <p>Issue? Email below.</p>
+            <p className='first-line'>Issue? Email below.</p>
         </div>
     )
 }
