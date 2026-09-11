@@ -12,9 +12,9 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: error.message });
     }
 
-    const tracksWithUrls = data
+    const tracksWithUrls = await Promise.all(data
         .filter(file => file.name !== '.emptyFolderPlaceholder')
-        .map(file => {
+        .map(async file => {
             const fullPath = file.name;
 
             const { data: urlData } = supabase
@@ -22,11 +22,34 @@ export default async function handler(req, res) {
                 .from('tracks')
                 .getPublicUrl(fullPath);
 
+            const {data: fileName, fileNameError} = await supabase
+                .from('Tracks')
+                .select('fileTrackName')
+                .eq('fileName', file.name)
+                .single()
+
+            const {data: artistName, artistNameError} = await supabase
+                .from('Tracks')
+                .select('fileArtistName')
+                .eq('fileName', file.name)
+                .single()
+
+            const {data: genre, genreError} = await supabase
+                .from('Tracks')
+                .select('fileGenre')
+                .eq('fileName', file.name)
+                .single()
+
+            // console.log(fileName.fileTrackName, urlData.publicUrl);
+
             return {
-                name: file.name,
+                name: fileName.fileTrackName,
                 url: urlData.publicUrl,
+                artistName: artistName.fileArtistName,
+                genre: genre.fileGenre,
             };
-    });
+        })
+    );
 
     // console.log(tracksWithUrls);
 

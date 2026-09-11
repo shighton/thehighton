@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        console.log('Upload function successfully called', req.method);
+        console.log('Upload function successfully called:', req.method);
 
         const supabase = createClient();
         const form = formidable({ multiples: false });
@@ -32,11 +32,26 @@ export default async function handler(req, res) {
         const fileBuffer = fs.readFileSync(file.filepath);
         const fileName = `${Date.now()}-${file.originalFilename}`;
 
+        // console.log(fields);
+
+        const fileArtistName = fields.artistName;
+        const fileTrackName = fields.trackName;
+        const fileGenre = fields.genre;
+
         const { error: uploadError } = await supabase
             .storage
             .from('tracks')
             .upload(fileName, fileBuffer, {
                 contentType: file.mimetype,
+            });
+
+        const { error: dbError } = await supabase
+            .from('Tracks')
+            .insert({
+                fileName: fileName,
+                fileArtistName: fileArtistName,
+                fileTrackName: fileTrackName,
+                fileGenre: fileGenre
             });
 
         if (uploadError) {

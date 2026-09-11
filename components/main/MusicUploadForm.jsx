@@ -42,17 +42,21 @@ export default function MusicUploadForm() {
 
                 <label className='upload-form-label'>Genre:</label>
                 <select onChange={e => setGenre(e.target.value)} required>
+                    <option>AI Slop</option>
+                    <option>Alternative</option>
                     <option>Classical</option>
+                    <option>Comedy</option>
                     <option>Country</option>
                     <option>Electronic</option>
                     <option>Folk</option>
                     <option>Hip-Hop</option>
                     <option>Jazz</option>
-                    <option>Labelless</option>
                     <option>Metal</option>
+                    <option>Other</option>
                     <option>Pop</option>
+                    <option>Punk</option>
                     <option>Rock</option>
-                    <option>Slop</option>
+                    <option>Trash</option>
                 </select>
 
                 <label className='upload-form-label'>File:</label>

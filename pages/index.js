@@ -11,9 +11,7 @@ const Home = () => (
       <h3 className='welcome-interests'>Music |x| Tech</h3>
 
       <p className='first-line'><a className='blue-links' href='/sabastian'>Learn more</a> about Sabastian or 
-      check out the <a className='blue-links' href='/dashboard'>indie playlist</a>.</p>
-
-      <p>Site's under heavy construction, so beware of potholes. Hand coded y'know.</p>
+      check out <a className='blue-links' href='/dashboard'>the playlist</a>.</p>
 
       <div className='home-pics'>
 

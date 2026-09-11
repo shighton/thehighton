@@ -15,7 +15,7 @@ const Sabastian = () => (
         
                 <p>Proven business ROI applying soft/hardware break/fix, networking, web dev, data analysis, and machine learning solutions.</p>
 
-                <p>B.S. in Computer Science with a year+ of experience in the field in a variety of settings.</p>
+                <p>B.S. in Computer Science with a year of work experience in a variety of settings and plenty more years outside the office.</p>
 
                 <p>Co-author of <a href='https://ieeexplore.ieee.org/document/10500205' className='blue-links' target='_blank'>published research</a> in machine learning contributing to bioinformatics.</p>
 

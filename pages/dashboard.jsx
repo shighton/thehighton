@@ -29,7 +29,7 @@ export default function Dashboard() {
             <h1 className='big-sth'>The Playlist</h1>
             <Playlist/>
             <h1 className='big-sth'>Upload</h1>
-            <p><b>One upload</b> or all your tracks will be deleted. All tracks are public for download. Wav files only.</p>
+            <p><b>*One upload</b> or all your tracks will be deleted. All tracks are <b>PUBLIC</b> for download.*</p>
             <MusicUploadForm/>
             <p>Issue? Email below.</p>
         </div>
