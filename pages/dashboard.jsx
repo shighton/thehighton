@@ -12,13 +12,14 @@ export default function Dashboard() {
     if (!session) {
         return (
             <div className='welcome'>
-                <h1 className='welcome-home'>Halt, Bots and Troublemakers!</h1>
-                <p className='must-login'>You must be logged in to view the playlist or upload to it.</p>
+                <h1 className='welcome-home'>The Playlist</h1>
+                <p className='must-login'>Bots need not enter. You must be logged in to view the playlist or upload to it.</p>
                 <button className='account-button' onClick={() => signIn('google')}>Log In With Google</button>
                 <p className='must-login'>In the meantime, here's a Malibu seagull looking wistfully into the distant ocean waves.</p>
                 <div className='grad-images'>
                     <img className='login-grad' src='resources/Bird.jpg'></img>
                 </div>
+                <p className='first-line'>Issue? Email below.</p>
             </div>
         );
     }

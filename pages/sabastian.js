@@ -11,13 +11,13 @@ const Sabastian = () => (
 
             <div className='abstract'>
 
-                <p>IT enthusiast with quality industry experience and a love for creativity.</p>
+                <p><i>~ IT enthusiast with quality industry experience and a love for creativity.</i></p>
         
-                <p>Proven business ROI applying soft/hardware break/fix, networking, web dev, data analysis, and machine learning solutions.</p>
+                <p><i>Proven business ROI applying soft/hardware break/fix, networking, web dev, data analysis, and machine learning solutions.</i></p>
 
-                <p>B.S. in Computer Science with a year of work experience in a variety of settings and plenty more years outside the office.</p>
+                <p><i>B.S. in Computer Science with a year of work experience in a variety of settings and plenty more years outside the office.</i></p>
 
-                <p>Co-author of <a href='https://ieeexplore.ieee.org/document/10500205' className='blue-links' target='_blank'>published research</a> in machine learning contributing to bioinformatics.</p>
+                <p><i>Co-author of <a href='https://ieeexplore.ieee.org/document/10500205' className='blue-links' target='_blank'>published research</a> in machine learning contributing to bioinformatics. ~</i></p>
 
             </div>
 
@@ -45,7 +45,7 @@ const Sabastian = () => (
             <div className='grad-images'>
 
                 <img className='travel-grad' src='resources/MapChart_Map.png'></img>
-                <p className='first-line'>I have been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA. </p>
+                <p className='first-line'>I've been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA. </p>
 
             </div>
 
@@ -70,6 +70,8 @@ const Sabastian = () => (
             </div> */}
 
             <p className='first-line'>Here are some old <a className='blue-links' href='/projects'>projects</a>.</p>
+
+            <p className='first-line'>Issue? Email below.</p>
 
         </div>
 
