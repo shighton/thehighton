@@ -86,6 +86,7 @@ export default function Playlist() {
                 className='highton-player'
                 ref={audioRef}
                 src={tracks[currentTrack]?.url}
+                preload='none'
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
                 onEnded={handleTrackEnd}

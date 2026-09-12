@@ -8,7 +8,8 @@ export default function MusicUploadForm() {
     const [file, setFile] = useState(null);
     const [artistName, setArtistName] = useState('');
     const [trackName, setTrackName] = useState('');
-    const [genre, setGenre] = useState(null);
+    const [genre, setGenre] = useState('AI Slop');
+    const [fileUploadMessage, setFileUploadMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,31 +17,33 @@ export default function MusicUploadForm() {
 
         const fileName = file.name;
 
-        const { uploadError } = await supabase
+        const { error: uploadError } = await supabase
             .storage
             .from('tracks')
             .upload(fileName, file);
         
         if (uploadError) {
-            console.error(error);
+            // console.error(uploadError);
+            setFileUploadMessage(`Upload failed: ${uploadError.message}`);
             return;
+        } else {
+            setFileUploadMessage('File upload success!');
+            const formData = new FormData();
+            formData.append('fileName', fileName);
+            formData.append('artistName', artistName);
+            formData.append('trackName', trackName);
+            formData.append('genre', genre);
+    
+            const res = await fetch('api/tracks/upload', {
+                method: 'POST',
+                body: formData,
+            });
+    
+            // const data = await res.json();
+            const data = await res.text();
+            // alert(data.message);
+            console.log('Metadata upload status: ', data);
         }
-
-        const formData = new FormData();
-        formData.append('fileName', fileName);
-        formData.append('artistName', artistName);
-        formData.append('trackName', trackName);
-        formData.append('genre', genre);
-
-        const res = await fetch('api/tracks/upload', {
-            method: 'POST',
-            body: formData,
-        });
-
-        // const data = await res.json();
-        const data = await res.text();
-        // alert(data.message);
-        console.log(data);
     };
 
     return (
@@ -81,6 +84,8 @@ export default function MusicUploadForm() {
                 
                 <button className='upload-form-submit' type='submit'>Upload Track</button>
             </form>
+
+            <p>{fileUploadMessage}</p>
         </div>
     );
 }

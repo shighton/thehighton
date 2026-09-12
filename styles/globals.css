@@ -506,7 +506,11 @@ width: 100%;
 }
 
 .upload-form-file-label input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .upload-form-submit {
@@ -518,6 +522,29 @@ width: 100%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.upload-form-submit:hover {
+  transform: translateY(-1px);
+
+  background: linear-gradient(
+    145deg,
+    #2f0c81,
+    #171717
+  );
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(255, 255, 255, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.upload-form-submit:active {
+  transform: translateY(1px);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.35),
+    inset 0 2px 4px rgba(0, 0, 0, 0.35);
 }
 
 .playlist {

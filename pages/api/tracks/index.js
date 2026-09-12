@@ -15,14 +15,14 @@ export default async function handler(req, res) {
     const tracksWithUrls = await Promise.all(data
         .filter(file => file.name !== '.emptyFolderPlaceholder')
         .map(async file => {
-            const {data: fileName, fileNameError} = await supabase
+            const {data: fileName, error: fileNameError} = await supabase
                 .from('Tracks')
                 .select('fileTrackName')
                 .eq('fileName', file.name)
                 .single()
 
             if (fileNameError) {
-                console.error(error);
+                console.error(fileNameError);
                 return;
             }
 
@@ -33,18 +33,18 @@ export default async function handler(req, res) {
                 .single()
 
             if (artistNameError) {
-                console.error(error);
+                console.error(artistNameError);
                 return;
             }
 
-            const {data: genre, genreError} = await supabase
+            const {data: genre, error: genreError} = await supabase
                 .from('Tracks')
                 .select('fileGenre')
                 .eq('fileName', file.name)
                 .single()
 
             if (genreError) {
-                console.error(error);
+                console.error(genreError);
                 return;
             }
 

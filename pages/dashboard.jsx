@@ -29,7 +29,7 @@ export default function Dashboard() {
             <h1 className='big-sth'>The Playlist</h1>
             <Playlist/>
             <h1 className='big-sth'>Upload</h1>
-            <p className='first-line'><b>*One upload</b> or all your tracks will be deleted. All tracks are <b>PUBLIC</b> for download.*</p>
+            <p className='first-line'><b>*One upload</b> or all your tracks will be deleted. All tracks are <b>PUBLIC</b> for download. 50MB upload limit.*</p>
             <MusicUploadForm/>
             <p className='first-line'>Issue? Email below.</p>
         </div>
