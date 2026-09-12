@@ -17,6 +17,8 @@ export default function MusicUploadForm() {
 
         const fileName = file.name;
 
+        setFileUploadMessage('Uploading...');
+
         const { error: uploadError } = await supabase
             .storage
             .from('tracks')
