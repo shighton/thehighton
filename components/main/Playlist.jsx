@@ -75,7 +75,12 @@ export default function Playlist() {
 
     return (
         <div className='playlist'>
-            <h2 className='now-playing-title'>{tracks[currentTrack].name.replace(/\[\"/, '').replace(/\"\]/, '')} - {tracks[currentTrack].artistName.replace(/\[\"/, '').replace(/\"\]/, '')}</h2>
+
+            {tracks.length === 0 || tracks[tracks.length - 1].name === '.emptyFolderPlaceholder' ? (
+                <p>No tracks in playlist.</p>
+            ) : (
+                <h2 className='now-playing-title'>{tracks[currentTrack].name.replace(/\[\"/, '').replace(/\"\]/, '')} - {tracks[currentTrack].artistName.replace(/\[\"/, '').replace(/\"\]/, '')}</h2>
+            )}
 
             <AudioPlayer
                 className='highton-player'

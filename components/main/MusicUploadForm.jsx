@@ -14,8 +14,20 @@ export default function MusicUploadForm() {
         e.preventDefault();
         if (!file) return;
 
+        const fileName = file.name;
+
+        const { uploadError } = await supabase
+            .storage
+            .from('tracks')
+            .upload(fileName, file);
+        
+        if (uploadError) {
+            console.error(error);
+            return;
+        }
+
         const formData = new FormData();
-        formData.append('file', file);
+        formData.append('fileName', fileName);
         formData.append('artistName', artistName);
         formData.append('trackName', trackName);
         formData.append('genre', genre);

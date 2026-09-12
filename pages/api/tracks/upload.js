@@ -28,22 +28,23 @@ export default async function handler(req, res) {
             });
         });
 
-        const file = Array.isArray(files.file) ? files.file[0] : files.file;
-        const fileBuffer = fs.readFileSync(file.filepath);
-        const fileName = `${Date.now()}-${file.originalFilename}`;
+        // const file = Array.isArray(files.file) ? files.file[0] : files.file;
+        // const fileBuffer = fs.readFileSync(file.filepath);
+        // const fileName = `${Date.now()}-${file.originalFilename}`;
 
         // console.log(fields);
 
-        const fileArtistName = fields.artistName;
-        const fileTrackName = fields.trackName;
-        const fileGenre = fields.genre;
+        const fileName = fields.fileName[0];
+        const fileArtistName = fields.artistName[0];
+        const fileTrackName = fields.trackName[0];
+        const fileGenre = fields.genre[0];
 
-        const { error: uploadError } = await supabase
-            .storage
-            .from('tracks')
-            .upload(fileName, fileBuffer, {
-                contentType: file.mimetype,
-            });
+        // const { error: uploadError } = await supabase
+        //     .storage
+        //     .from('tracks')
+        //     .upload(fileName, fileBuffer, {
+        //         contentType: file.mimetype,
+        //     });
 
         const { error: dbError } = await supabase
             .from('Tracks')
@@ -54,9 +55,9 @@ export default async function handler(req, res) {
                 fileGenre: fileGenre
             });
 
-        if (uploadError) {
-            console.error(uploadError);
-            return res.status(500).json({error: "Storage upload failed."});
+        if (dbError) {
+            console.error(dbError);
+            return res.status(500).json({error: "File metadata upload failure."});
         }
 
         return res.status(200).json({

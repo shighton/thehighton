@@ -21,17 +21,32 @@ export default async function handler(req, res) {
                 .eq('fileName', file.name)
                 .single()
 
+            if (fileNameError) {
+                console.error(error);
+                return;
+            }
+
             const {data: artistName, artistNameError} = await supabase
                 .from('Tracks')
                 .select('fileArtistName')
                 .eq('fileName', file.name)
                 .single()
 
+            if (artistNameError) {
+                console.error(error);
+                return;
+            }
+
             const {data: genre, genreError} = await supabase
                 .from('Tracks')
                 .select('fileGenre')
                 .eq('fileName', file.name)
                 .single()
+
+            if (genreError) {
+                console.error(error);
+                return;
+            }
 
             return {
                 name: fileName.fileTrackName,
