@@ -768,6 +768,423 @@ audio {
   width: 15vw;
 }
 
+
+
+.us-map-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*
+ * React Simple Maps creates the SVG for us.
+ * Keeping width at 100% makes the map responsive.
+ */
+
+.us-map {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*
+ * Base state appearance
+ */
+
+.us-map .state {
+    fill: #2d1249;
+    stroke: #7e92b1;
+    stroke-width: 0.75;
+    stroke-linejoin: round;
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        fill 0.15s ease,
+        opacity 0.15s ease,
+        stroke-width 0.15s ease;
+}
+
+.us-map .state.group-one {
+    fill: #672140;
+}
+
+.us-map .state.group-two {
+    fill: #7d3dba;
+}
+
+.us-map .state.group-three {
+    fill: #006370;
+}
+
+/*
+ * Hover
+ *
+ * This applies to every state regardless of its group.
+ */
+
+.us-map .state:hover {
+    opacity: 0.75;
+    stroke-width: 1.5;
+}
+
+/*
+ * Keyboard accessibility
+ */
+
+.us-map .state:focus-visible {
+    stroke: #000000;
+    stroke-width: 2;
+}
+
+/*
+ * Tooltip
+ */
+
+.us-map-tooltip {
+    position: absolute;
+
+    top: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 7px 12px;
+
+    background: #111111;
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+    z-index: 10;
+}
+
+.state-view {
+    max-width: 1200px;
+}
+
+
+.state-content {
+    width: 100%;
+}
+
+.state-back-button {
+    border: none;
+    background: none;
+
+    padding: 8px 0;
+
+    font-size: 15px;
+    color: #969696;
+
+    cursor: pointer;
+
+    transition: color 0.15s ease;
+}
+
+
+.state-back-button:hover {
+    color: #962fcd;
+}
+
+.state-header {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+
+.state-header h1 {
+    margin: 0;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.state-status {
+    margin-top: 6px;
+    margin-bottom: 0;
+
+    color: #858585;
+
+    font-size: 16px;
+}
+
+.state-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 50px;
+
+    align-items: stretch;
+}
+
+.selected-state-map {
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.selected-state-map svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.selected-state {
+    stroke: #ffffff;
+    stroke-width: 1;
+
+    stroke-linejoin: round;
+
+    outline: none;
+}
+
+.selected-state.group-one {
+    fill: #672140;
+}
+
+
+.selected-state.group-two {
+    fill: #7d3dba;
+}
+
+
+.selected-state.group-three {
+    fill: #006370;
+}
+
+
+.selected-state.default {
+    fill: #2d1249;
+}
+
+.state-information {
+    min-width: 0;
+}
+
+.state-information h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+.state-information p {
+    margin-top: 0;
+
+    line-height: 1.6;
+
+    color: #878787;
+}
+
+.state-photos {
+    display: grid;
+    grid-template-columns: (minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.state-photos img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 6px;
+
+    object-fit: cover;
+}
+
+
+.photo-placeholder {
+    grid-column: 1 / -1;
+
+    min-height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    border: 1px dashed #cccccc;
+    border-radius: 6px;
+
+    color: #888888;
+
+    text-align: center;
+}
+
+.marker-pulse {
+    fill: none;
+    stroke: #eeff00;
+    stroke-width: 3;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: marker-pulse 1.5s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes marker-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.photo-cluster-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000ba;
+    z-index: 20;
+}
+
+.photo-cluster-panel {
+    position: relative;
+    width: min(400px, 90%);
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 25px;
+    background: #000000;
+    border: 1px solid #545454;
+    box-shadow: 0 0 50px #000000;
+    border-radius: 8px;
+}
+
+.photo-cluster-panel h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.photo-cluster-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: #777777;
+    cursor: pointer;
+}
+
+.photo-cluster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.photo-cluster-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+}
+
+.photo-cluster-item:hover {
+    background: #320361;
+}
+
+.photo-cluster-item img {
+    width: 60px;
+    height: 45px;
+    margin-right: 12px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.photo-cluster-item span {
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .us-map .state {
+        stroke-width: 0.5;
+    }
+
+    .us-map .state:hover {
+        stroke-width: 1;
+    }
+
+    .us-map-tooltip {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .state-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+
+    .state-header {
+        margin-bottom: 20px;
+    }
+
+
+    .state-header h1 {
+        font-size: 32px;
+    }
+
+
+    .state-information h2 {
+        font-size: 23px;
+    }
+
+
+    .state-photos {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
 .cart-icon{
   font-size: 1.8em;
   color:#deeaff;

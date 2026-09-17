@@ -1,5 +1,5 @@
 import React from 'react'
-
+import USMap from '../components/main/USMap';
 // import {Sabastian} from '../components'
 
 const Sabastian = () => (
@@ -24,6 +24,14 @@ const Sabastian = () => (
             <p className='first-line'><b>*Download my work resume </b><a className='blue-links' target='_blank' 
             href='resources/2025_Sabastian-Highton_Resume_.pdf' download><b>here</b></a><b>.*</b></p>
 
+            <USMap
+                groupOne={['ND', 'LA']}
+                groupTwo={['WI', 'GA']}
+                groupThree={['AK', 'HI']}
+                onStateClick={(state) => {console.log(state)}}
+            ></USMap>
+            
+            {/* <p className='first-line'>I've been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA for now.</p> */}
 
             <h1 className='big-sth'>Music</h1>
 
@@ -40,16 +48,15 @@ const Sabastian = () => (
 
             <p className='first-line'>Listen on <a className='blue-links' target='_blank' href='https://www.youtube.com/@sabhighton'>YouTube</a>.</p>
 
-            <h1 className='big-sth'>Travel</h1>
+            {/* <h1 className='big-sth'>Travel</h1>
 
             <div className='grad-images'>
 
                 <img className='travel-grad' src='resources/MapChart_Map.png'></img>
-                <p className='first-line'>I've been to 46 states and lived in GA and WI. I'll make it out to AK and HI at some point and don't mind skipping ND and LA. </p>
 
             </div>
 
-            <h1 className='big-sth'>Photos</h1>
+            <h1 className='big-sth'>Photos</h1> */}
             
             <div className='grad-images'>
 
