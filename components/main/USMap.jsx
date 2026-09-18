@@ -618,8 +618,8 @@ const STATE_DATA = {
                 id: 'university-of-notre-dame-notre-dame-in',
                 src: "resources/USA_Map/USA_26/IN/IN2.jpeg",
                 title: 'University of Notre Dame, Notre Dame, IN',
-                lat: 41.1243,
-                lon: -85.2157484,
+                lat: 41.7051917,
+                lon: -86.2351655,
             },
         ],
     },
@@ -1681,14 +1681,14 @@ function clusterPhotos(photos, zoom) {
 
     const threshold =
         zoom < 2
-            ? 2
+            ? 0.5
             : zoom < 3
-              ? 1
+              ? 0.25
               : zoom < 4
-                ? 0.5
+                ? 0.2
                 : zoom < 5
-                  ? 0.2
-                  : 0.05;
+                  ? 0.15
+                  : 0.1;
 
     const clusters = [];
 
@@ -1952,11 +1952,6 @@ export default function USMap({
                                                 <Marker
                                                     key={cluster.id}
                                                     coordinates={[cluster.lon, cluster.lat, ]}
-                                                    // onClick={() => {
-                                                    //     setCenter([cluster.lon, cluster.lat, ]);
-
-                                                    //     setZoom(Math.min(zoom * 2, 8));
-                                                    // }}
                                                     onClick={() => setPhotoCluster(cluster)}
                                                 >
                                                     {clusterHasSelectedPhoto && (
