@@ -442,14 +442,14 @@ const STATE_DATA = {
             },
             {
                 id: 'the-masquerade-atlanta-ga',
-                src: "resources/USA_Map/Pre_26/GA/GA2.jpg",
+                src: "resources/USA_Map/Pre_26/GA/GA2.JPG",
                 title: 'The Masquerade, Atlanta, GA',
                 lat: 33.7517376,
                 lon: -84.3905352,
             },
             {
                 id: 'jekyll-island-ga',
-                src: "resources/USA_Map/Pre_26/GA/GA3.jpg",
+                src: "resources/USA_Map/Pre_26/GA/GA3.JPG",
                 title: 'Jekyll Island, GA',
                 lat: 31.0620632,
                 lon: -81.4087646,
@@ -470,14 +470,14 @@ const STATE_DATA = {
             },
             {
                 id: 'gibbs-gardens-ga',
-                src: "resources/USA_Map/Pre_26/GA/GA6.jpg",
+                src: "resources/USA_Map/Pre_26/GA/GA6.JPG",
                 title: 'Gibbs Gardens, Ball Ground, GA',
                 lat: 34.3786626,
                 lon: -84.2828559,
             },
             {
                 id: 'nowhere-bar-athens-ga',
-                src: "resources/USA_Map/Pre_26/GA/GA7.jpeg",
+                src: "resources/USA_Map/Pre_26/GA/GA7.JPEG",
                 title: 'Nowhere Bar, Athens, GA',
                 lat: 33.9586944,
                 lon: -83.3796469,
@@ -1098,7 +1098,7 @@ const STATE_DATA = {
             },
             {
                 id: 'cornell-university-ithaca-ny',
-                src: "resources/USA_Map/Pre_26/NY/NY2.jpg",
+                src: "resources/USA_Map/Pre_26/NY/NY2.JPG",
                 title: 'Cornell University, Ithaca, NY',
                 lat: 42.4445404,
                 lon: -76.4816239,
@@ -1123,7 +1123,7 @@ const STATE_DATA = {
         photos: [
             {
                 id: 'newfound-gap-nc',
-                src: "resources/USA_Map/Pre_26/NC/NC1.jpeg",
+                src: "resources/USA_Map/Pre_26/NC/NC1.JPEG",
                 title: 'Newfound Gap, NC',
                 lat: 35.6110072,
                 lon: -83.4273824,
@@ -1370,7 +1370,7 @@ const STATE_DATA = {
         photos: [
             {
                 id: 'smoky-mountain-cabin-sevierville-tn',
-                src: "resources/USA_Map/USA_26/TN/TN1.png",
+                src: "resources/USA_Map/USA_26/TN/TN1.PNG",
                 title: 'Smoky Mountain Cabin, Sevierville, TN',
                 lat: 35.7843388,
                 lon: -83.4828269,
